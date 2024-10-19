@@ -1,12 +1,10 @@
 
-// Login;
+// Login
 import React, { useState } from 'react';
 import axios from 'axios';
 import {  useNavigate, Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
 import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
-
-
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -19,7 +17,7 @@ const Login = () => {
     try {
       const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
       setMessage(response.data.message);
-      navigate("/home"); 
+      navigate("/"); 
     } catch (error) {
       console.error("Login error:", error); 
       setMessage(error.response ? error.response.data.message : 'An error occurred');

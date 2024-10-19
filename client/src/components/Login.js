@@ -1,5 +1,5 @@
 
-// export default Login;
+// Login;
 import React, { useState } from 'react';
 import axios from 'axios';
 import {  useNavigate, Link } from "react-router-dom";
@@ -19,9 +19,9 @@ const Login = () => {
     try {
       const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
       setMessage(response.data.message);
-      navigate("/home"); // Success message
+      navigate("/home"); 
     } catch (error) {
-      console.error("Login error:", error); // Log the error for debugging
+      console.error("Login error:", error); 
       setMessage(error.response ? error.response.data.message : 'An error occurred');
       
     }

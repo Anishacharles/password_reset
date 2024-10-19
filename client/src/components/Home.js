@@ -6,9 +6,9 @@ const Home = () => {
     return (
         <div className="home text-center mt-5"> {/* Applying custom class */}
             <h2 className="display-4">Welcome to the Home Page</h2>
-            <p className="lead">You are successfully logged in</p>
+            {/* <p className="lead">You are successfully logged in</p> */}
             <p>
-                <Link to="/login" className="btn btn-link">Back</Link>
+                <Link to="/register" className="btn btn-link">LogIn</Link>
             </p>
         </div>
     );

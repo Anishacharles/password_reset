@@ -15,7 +15,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+      const response = await axios.post('https://passwordreset-3.onrender.com/api/auth/login', { email, password });
       setMessage(response.data.message);
       navigate("/"); 
     } catch (error) {

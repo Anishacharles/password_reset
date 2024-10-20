@@ -12,7 +12,7 @@ const ForgetPassword = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://passwordreset-3.onrender.com/api/auth/forget-password', { email });
+      const response = await axios.post('https://resetpasswordlink.netlify.app/api/auth/forget-password', { email });
       setMessage(response.data.message);
     } catch (error) {
       setMessage(error.response.data.message);

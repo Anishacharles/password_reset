@@ -16,7 +16,7 @@ const ResetPassword = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`http://localhost:5000/api/auth/reset-password/${token}`, { password });
+      const response = await axios.post(`https://passwordreset-3.onrender.com/api/auth/reset-password/${token}`, { password });
       setMessage(response.data.message);
       
       // Navigate to the login page after successful password reset
